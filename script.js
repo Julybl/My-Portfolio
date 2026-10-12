@@ -846,3 +846,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+function openMotionGraphics() {
+    const modal = document.getElementById("motionGraphicsModal");
+    const player = document.getElementById("motionGraphicsPlayer");
+
+    modal.classList.add("is-open");
+    document.body.classList.add("motion-modal-open");
+
+    player.currentTime = 0;
+    player.play().catch(() => {});
+}
+
+function closeMotionGraphics() {
+    const modal = document.getElementById("motionGraphicsModal");
+    const player = document.getElementById("motionGraphicsPlayer");
+
+    player.pause();
+    modal.classList.remove("is-open");
+    document.body.classList.remove("motion-modal-open");
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeMotionGraphics();
+    }
+});
+

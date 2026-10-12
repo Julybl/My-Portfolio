@@ -1050,6 +1050,81 @@
         </section>
 
 
+
+<!-- ==================================================
+                         PROJECT 06
+================================================== -->
+
+<article class="project-card reveal">
+
+    <button
+        type="button"
+        class="project-image"
+        aria-label="View Social Media Motion Graphics project"
+        onclick="openMotionGraphics()">
+
+        <video
+            src="motion graphics.mp4"
+            class="project-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata">
+        </video>
+
+        <div class="project-hover">
+            <span>VIEW PROJECT</span>
+            <strong>↗</strong>
+        </div>
+
+    </button>
+
+    <div class="project-information">
+        <div>
+            <p class="project-category">
+                SOCIAL MEDIA · MOTION GRAPHICS
+            </p>
+
+            <h3>Social Media Motion Graphics</h3>
+        </div>
+
+        <span class="project-number">05</span>
+    </div>
+
+</article>
+
+<!-- MOTION GRAPHICS MODAL -->
+
+<div id="motionGraphicsModal" class="motion-modal"
+     role="dialog" aria-modal="true"
+     aria-label="Social Media Motion Graphics"
+     onclick="if(event.target === this) closeMotionGraphics()">
+
+    <button class="motion-close"
+            type="button"
+            aria-label="Close video"
+            onclick="closeMotionGraphics()">
+        &times;
+    </button>
+
+    <video id="motionGraphicsPlayer"
+           controls
+           autoplay
+           muted
+           playsinline>
+        <source
+            src="motion graphics.mp4"
+            type="video/mp4">
+        Your browser does not support this video.
+    </video>
+
+</div>
+
+
+
+
+
         <!-- ==================================================
              ABOUT
         ================================================== -->

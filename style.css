@@ -3042,3 +3042,52 @@ body.image-viewer-open {
     }
 
 }
+
+
+.project-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.motion-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 20px;
+}
+
+.motion-modal.is-open {
+    display: flex;
+}
+
+.motion-modal video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.motion-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+body.motion-modal-open {
+    overflow: hidden;
+}
+
